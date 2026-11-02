@@ -2,10 +2,10 @@
   "name": "meal-system-backend",
   "version": "1.0.0",
   "private": true,
-  "description": "Meal System API — Express + TypeScript + Drizzle ORM (PostgreSQL)",
+  "description": "Meal System API \u2014 Express + TypeScript + Drizzle ORM (PostgreSQL)",
   "main": "dist/index.js",
   "engines": {
-    "node": ">=20"
+    "node": "22.x"
   },
   "scripts": {
     "dev": "tsx watch src/index.ts",
