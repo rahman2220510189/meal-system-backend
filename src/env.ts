@@ -1,4 +1,5 @@
 import "dotenv/config";
+import { cleanDbUrl } from "./db/url";
 
 function required(name: string, fallback?: string): string {
   const v = process.env[name] ?? fallback;
@@ -14,7 +15,7 @@ const NODE_ENV = process.env.NODE_ENV || "development";
 export const env = {
   NODE_ENV,
   PORT: Number(process.env.PORT || 4000),
-  DATABASE_URL: required("DATABASE_URL"),
+  DATABASE_URL: cleanDbUrl(required("DATABASE_URL")),
   JWT_SECRET: required("JWT_SECRET", NODE_ENV === "production" ? undefined : "dev-only-secret-change-me"),
   // Comma separated list of allowed frontend origins
   FRONTEND_URLS: (process.env.FRONTEND_URL || "http://localhost:3000")

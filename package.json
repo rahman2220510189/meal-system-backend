@@ -5,7 +5,7 @@
   "description": "Meal System API — Express + TypeScript + Drizzle ORM (PostgreSQL)",
   "main": "dist/index.js",
   "engines": {
-    "node": ">=20"
+    "node": "22.x"
   },
   "scripts": {
     "dev": "tsx watch src/index.ts",
@@ -16,6 +16,7 @@
     "db:migrate": "tsx src/db/migrate.ts",
     "db:studio": "drizzle-kit studio",
     "seed:demo": "tsx scripts/seed-demo.ts",
+    "reset-password": "tsx scripts/reset-password.ts",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "test": "vitest run"
   },
